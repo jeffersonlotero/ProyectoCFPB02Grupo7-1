@@ -4,4 +4,5 @@ Grupo 7
   2. Wendy Katherine Gomez Villa 
   3. Emmanuel Arturo Leon Cid
   4. Aldair Manchego Arias
+  5. Jose Luis Briceño Diaz
 - Enlace al repositorio: https://github.com/WendyKatherine/ProyectoCFPB02Grupo7.git
