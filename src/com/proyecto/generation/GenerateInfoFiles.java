@@ -20,9 +20,10 @@ public class GenerateInfoFiles {
                 writer.write(tipoDoc + ";" + id + ";" + nombre + ";" + apellido + "\n");
             }
             System.out.println("vendedores.csv generado con éxito.");
-        } catch (IOException e) {
-            System.err.println("Error al generar vendedores.csv: " + e.getMessage());
-        }
+       } catch (IOException e) {
+    System.err.println("⚠️ Error al escribir el archivo: " + e.getMessage());
+    e.printStackTrace(); // Esto mostrará más detalles si algo sale mal.
+}
     }
 
     public static void createProductsFile(int cantidadProductos) {
@@ -35,9 +36,10 @@ public class GenerateInfoFiles {
                 writer.write(id + ";" + nombre + ";" + precio + "\n");
             }
             System.out.println("productos.csv generado con éxito.");
-        } catch (IOException e) {
-            System.err.println("Error al generar productos.csv: " + e.getMessage());
-        }
+      } catch (IOException e) {
+    System.err.println("⚠️ Error al escribir el archivo: " + e.getMessage());
+    e.printStackTrace(); // Esto mostrará más detalles si algo sale mal.
+}
     }
 
     public static void createSalesMenFile(int ventasAleatorias, String nombre, long id) {
@@ -50,9 +52,10 @@ public class GenerateInfoFiles {
                 writer.write(idProducto + ";" + cantidad + "\n");
             }
             System.out.println("ventas_" + id + ".csv generado con éxito.");
-        } catch (IOException e) {
-            System.err.println("Error al generar ventas_" + id + ".csv: " + e.getMessage());
-        }
+      } catch (IOException e) {
+    System.err.println("⚠️ Error al escribir el archivo: " + e.getMessage());
+    e.printStackTrace(); // Esto mostrará más detalles si algo sale mal.
+}
     }
 
     public static void main(String[] args) {
