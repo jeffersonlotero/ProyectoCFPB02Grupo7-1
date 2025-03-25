@@ -2,5 +2,5 @@ Grupo 7
 - Integrantes:  
   1. Jefferson andres lotero cruz
   2. Wendy Katherine Gomez Villa 
-  3. Nombre Completo 3  
+  3. Emmanuel Arturo Leon Cid
 - Enlace al repositorio: https://github.com/WendyKatherine/ProyectoCFPB02Grupo7.git
