@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class GenerateInfoFiles {
     
-    private static final String[] NOMBRES = {"María", "Juan", "Carlos", "Ana", "Pedro"};
+    private static final String[] NOMBRES = {"Camilo", "Wendy", "Emanuel", "Jefferson", "Jose"};
     private static final String[] APELLIDOS = {"Pérez", "Gómez", "Rodríguez", "López", "Martínez"};
     
     public static void createSalesManInfoFile(int cantidadVendedores) {
@@ -58,7 +58,7 @@ public class GenerateInfoFiles {
     public static void main(String[] args) {
         createSalesManInfoFile(5);
         createProductsFile(10);
-        createSalesMenFile(5, "María", 12345678);
+        createSalesMenFile(5, "Camilo", 12345678);
     }
 }
 
