@@ -1,0 +1,23 @@
+INFORME DE AVANCE DEL PROYECTO
+Nombre del proyecto: Generador de Archivos de Vendedores, Productos y Ventas
+Fecha de entrega: Martes 08 de 2025
+
+Detalle del estado actual del proecto
+Funcionalidades completas:
+Generación de archivo `vendedores.csv` con encabezados (TipoDocumento, NúmeroDocumento, NombreVendedor
+
+Generación de archivo `productos.csv` con encabezados (IdProducto, NombreProducto, PrecioPorUnidadProducto, CantidadProducto)
+
+Generación de archivos ventas_"DocumentoVendedor".csv` por cada vendedor con las Columnas ( IdVenta, IdProducto, NúmeroDocumentoVendedor, CantidadVentas)
+
+Menú interactivo en consola (`Main.java`) con las siguientes opciones:
+	1. Generar vendedores
+	2. Generar productos
+	3. Generar ventas
+	4. Generar todo (desactiva 1, 2 y 3)
+	5. Salir del sistema
+
+Cabe aclarar que este menu interactivo cuenta con algunas valiacionespara evitar ejecutar opciones ya seleccionada que sería innecesarias.
+
+Generación de archivos en carpeta datos
+
