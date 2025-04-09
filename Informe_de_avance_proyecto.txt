@@ -21,3 +21,10 @@ Cabe aclarar que este menu interactivo cuenta con algunas valiacionespara evitar
 
 Generación de archivos en carpeta datos
 
+Se propuso e implementó un mejor manejo de errores en la clase GenerateInfoFiles.java, usando System.err y printStackTrace() para mostrar errores detallados en consola.
+
+Se planteó una estructura organizada de clases (Vendedor, Producto, Venta) para mejorar la legibilidad del código.
+
+Se participó en el análisis del avance del grupo y se redactó una propuesta de estructura para el informe general.
+
+Se ofreció apoyo en la documentación del proyecto y organización de responsabilidades.
