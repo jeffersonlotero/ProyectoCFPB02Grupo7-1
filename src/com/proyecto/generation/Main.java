@@ -6,13 +6,15 @@ import java.util.*;
 public class Main {
     
     // Clase interna para representar vendedores
+    // La clase Vendedor tiene información sobre el tipo de documento, número de documento, nombre y apellido del vendedor, y el total de ventas realizadas.
     private static class Vendedor {
-        String tipoDoc;
-        long numDoc;
-        String nombres;
-        String apellidos;
-        double totalVentas;
-        
+        String tipoDoc;    // Tipo de documento del vendedor (DNI, Cédula, etc.)
+        long numDoc;    // Número de documento del vendedor
+        String nombres;    // Nombre(s) del vendedor
+        String apellidos;    // Apellido(s) del vendedor
+        double totalVentas;    // Total de ventas realizadas por el vendedor
+
+        //Aqui tenemos el constructor que inicializa los datos del vendedor
         Vendedor(String tipoDoc, long numDoc, String nombres, String apellidos) {
             this.tipoDoc = tipoDoc;
             this.numDoc = numDoc;
@@ -20,27 +22,28 @@ public class Main {
             this.apellidos = apellidos;
             this.totalVentas = 0.0;
         }
+        // Aqui tenemos el método que devuelve el nombre completo del vendedor
         
         String getNombreCompleto() {
             return nombres + " " + apellidos;
         }
     }
-    
-    // Clase interna para representar productos
+    // Importante aclarar que la clase producto tiene información sobre el ID del producto, nombre, precio y la cantidad vendida.
     private static class Producto {
-        String id;
-        String nombre;
-        double precio;
-        int cantidadVendida;
-        
+        String id;    // ID único del producto
+        String nombre;    // Nombre del producto
+        double precio;    // Precio del producto
+        int cantidadVendida;    // Cantidad de este producto vendida
+
+         // Constructor que inicializa los datos del producto
         Producto(String id, String nombre, double precio) {
-            this.id = id;
-            this.nombre = nombre;
-            this.precio = precio;
-            this.cantidadVendida = 0;
+            this.id = id;    
+            this.nombre = nombre;    
+            this.precio = precio;    
+            this.cantidadVendida = 0;    
         }
     }
-
+    // Método principal que inicia el procesamiento de ventas y genera los reportes
     public static void main(String[] args) {
         System.out.println("=== PROCESADOR DE VENTAS ===");
         System.out.println("Iniciando procesamiento...\n");
@@ -64,17 +67,19 @@ public class Main {
             e.printStackTrace();
         }
     }
-    
+     // Método para cargar los vendedores desde un archivo CSV
     private static List<Vendedor> cargarVendedores(String archivo) throws IOException {
         List<Vendedor> vendedores = new ArrayList<>();
         System.out.println("📂 Leyendo archivo de vendedores...");
         
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
+            // Leemos cada línea del archivo y la procesamos
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(";");
                 if (datos.length == 4) {
                     try {
+                         // Creamos un nuevo vendedor con los datos cargados
                         vendedores.add(new Vendedor(
                             datos[0].trim(), 
                             Long.parseLong(datos[1].trim()), 
@@ -92,16 +97,19 @@ public class Main {
         return vendedores;
     }
     
+    // Método para cargar los productos desde un archivo CSV
     private static List<Producto> cargarProductos(String archivo) throws IOException {
         List<Producto> productos = new ArrayList<>();
         System.out.println("📂 Leyendo archivo de productos...");
         
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
+            // Leemos cada línea del archivo y la procesamos
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(";");
                 if (datos.length >= 3) {
                     try {
+                         // Creamos un nuevo producto con los datos cargados
                         productos.add(new Producto(
                             datos[0].trim(), 
                             datos[1].trim(), 
@@ -118,6 +126,7 @@ public class Main {
         return productos;
     }
     
+    // Método para procesar los archivos de ventas de los vendedores
     private static void procesarArchivosVentas(String directorio, List<Vendedor> vendedores, List<Producto> productos) throws IOException {
         File carpeta = new File(directorio);
         File[] archivos = carpeta.listFiles((dir, nombre) -> nombre.startsWith("ventas_") && nombre.endsWith(".csv"));
@@ -127,7 +136,8 @@ public class Main {
         }
         
         System.out.println("\n🔍 Procesando " + archivos.length + " archivos de ventas...");
-        
+
+        // Procesamos cada archivo de ventas encontrado
         int archivosProcesados = 0;
         for (File archivo : archivos) {
             if (procesarArchivoVentas(archivo, vendedores, productos)) {
@@ -138,6 +148,7 @@ public class Main {
         System.out.println("✅ " + archivosProcesados + "/" + archivos.length + " archivos procesados correctamente");
     }
     
+    // Método para procesar cada archivo de ventas
     private static boolean procesarArchivoVentas(File archivo, List<Vendedor> vendedores, List<Producto> productos) {
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String primeraLinea = br.readLine();
@@ -160,13 +171,15 @@ public class Main {
                 System.err.println("⚠️ Número de documento inválido en archivo: " + archivo.getName());
                 return false;
             }
-            
+
+            // Buscamos el vendedor correspondiente
             Vendedor vendedor = buscarVendedor(vendedores, tipoDoc, numDoc);
             if (vendedor == null) {
                 System.err.println("⚠️ Vendedor no encontrado en archivo: " + archivo.getName());
                 return false;
             }
             
+            // Procesamos cada línea de ventas
             String linea;
             while ((linea = br.readLine()) != null) {
                 procesarLineaVenta(linea, vendedor, productos);
@@ -177,7 +190,8 @@ public class Main {
             return false;
         }
     }
-    
+
+    // Método para buscar un vendedor en la lista de vendedores
     private static Vendedor buscarVendedor(List<Vendedor> vendedores, String tipoDoc, long numDoc) {
         for (Vendedor v : vendedores) {
             if (v.tipoDoc.equals(tipoDoc) && v.numDoc == numDoc) {
@@ -186,7 +200,8 @@ public class Main {
         }
         return null;
     }
-    
+
+    // Método para procesar cada línea de venta    
     private static void procesarLineaVenta(String linea, Vendedor vendedor, List<Producto> productos) {
         String[] datos = linea.split(";");
         if (datos.length < 2) {
@@ -202,7 +217,8 @@ public class Main {
             System.err.println("⚠️ Cantidad inválida en línea: " + linea);
             return;
         }
-        
+
+        // Buscamos el producto correspondiente y actualizamos las ventas
         for (Producto p : productos) {
             if (p.id.equals(idProducto)) {
                 double valorVenta = p.precio * cantidad;
@@ -214,7 +230,9 @@ public class Main {
         
         System.err.println("⚠️ Producto no encontrado: " + idProducto);
     }
-    
+
+    // Método para generar el reporte de productos
+
     private static void generarReporteVendedores(List<Vendedor> vendedores) throws IOException {
         vendedores.sort((v1, v2) -> Double.compare(v2.totalVentas, v1.totalVentas));
         String archivoSalida = "datos/reporte_vendedores.csv";
