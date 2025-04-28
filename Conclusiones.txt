@@ -1,0 +1,13 @@
+Lo aprendido durante el desarrollo del proyecto
+
+Durante el desarrollo de las clases y del proyecto, hemos aprendido a generar y manipular archivos de texto, especialmente archivos CSV, y esto es importante en el manejo de grandes volúmenes de datos. Por otro lado, aprendimos a usar la programación para automatizar tareas que normalmente serían manuales, como la creación de archivos con datos aleatorios. También mejoramos nuestras habilidades para trabajar con clases, métodos y estructuras de control de flujo, al mismo tiempo que nos familiarizamos con la gestión de excepciones en Java, algo que es crucial para evitar errores en proyectos reales.
+
+Posibles aplicaciones en su vida profesional de las destrezas y conocimientos adquiridos y practicados durante el desarrollo del proyecto:
+
+El conocimiento y habilidades aprendidas tienen aplicaciones en nuestra futura carrera profesional como ingenieros en sistemas. La generación automatizada de datos, como se hizo con los vendedores, productos y ventas. Además, el manejo de archivos CSV es común en procesos de integración y análisis de datos, siendo crucial en proyectos que involucren Big Data, análisis de información y desarrollo de sistemas de almacenamiento de datos.
+
+Las dificultades presentadas durante el desarrollo del proyecto:
+
+Este proyecto nos permitió enfrentamos principalmente a dificultades al trabajar con la generación de datos aleatorios y asegurarnos de que la información creada fuera coherente y útil. Fue necesario ajustar la lógica para que los valores generados fueran realistas, como en el caso de los precios de productos o las cantidades de ventas. 
+
+Por otro lado, la coordinación con el equipo de trabajo fue otro papel fundamental, ya que lograr organizar la diferentes ideas, horarios y opiniones es todo un reto debido a las diferencias en la manera de trabajar de cada miembro del grupo.
