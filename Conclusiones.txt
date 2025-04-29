@@ -11,3 +11,19 @@ Las dificultades presentadas durante el desarrollo del proyecto:
 Este proyecto nos permitió enfrentamos principalmente a dificultades al trabajar con la generación de datos aleatorios y asegurarnos de que la información creada fuera coherente y útil. Fue necesario ajustar la lógica para que los valores generados fueran realistas, como en el caso de los precios de productos o las cantidades de ventas. 
 
 Por otro lado, la coordinación con el equipo de trabajo fue otro papel fundamental, ya que lograr organizar la diferentes ideas, horarios y opiniones es todo un reto debido a las diferencias en la manera de trabajar de cada miembro del grupo.
+
+
+aporte conclusiones.txt jefferon lotero
+Lo aprendido durante el desarrollo del proyecto:
+
+lo aprendido durante el desarrollo del proyecto y las clases para mi caso que vengo con bases cero de programacion aprendi que existe diferentes secuencias de programacion que son mas eficientes unas que otras  que se puede utilizar para manejar datos de mayor o menor tamaño y dependiendo del codigo puedo ser tambien mas eficente en los recursos que utiliza, en el proyecto se aprendio en generar archivos csv y que en cada entrega se mejoraba el codigo aplicando lo aprendido en clases o investigando con otros ejemplos dados en clases.
+
+Posibles aplicaciones en su vida profesional de las destrezas y conocimientos adquiridos y practicados durante el desarrollo del proyecto:
+
+para mi carrera de ingenieria industrial lo aplicaria como para la parte logistica , almacenamiento , produccion donde sus actividades suelen ser repetitivas donde los reportes suelen ser manuales pasarlos a ser generardos automaticamente.
+
+Las dificultades presentadas durante el desarrollo del proyecto:
+
+ para mi todo el proyecto tuvo dificultades desde la descarga del programa de programacion hasta el entendimiento de el significado de la secuencia de codigos para generar archivos CSV pero aplicando la practica y siguiendo los tutoriales se logro superar, al igual tambien gracias de el apoyo de mis compañeros que si tienen gran conocimiento de este tema supieron guiarme y explicarme como debia abordar los desarrollos de las entregas.   
+
+
